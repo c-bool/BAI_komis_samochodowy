@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Currency</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <section v-if="error_occured">
+      ERROR: Something went wrong!
+    </section>
+    <section v-else>
+      <div v-if="loading_page">
+        Loading page...
+      </div>
+      <div v-else>
+        <table style="width: 80%;">
+          <tr>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Year</th>
+            <th>VIN</th>
+            <th>FuelType</th>
+            <th>Capacity</th>
+            <th>Status</th>
+            <th>Drive</th>
+            <th>Gearbox</th>
+            <th>Price</th>
+          </tr>
+          <tr v-for="item in currency">
+            <td>{{ item.Make }}</td>
+            <td>{{ item.Model }}</td>
+            <td>{{ item.Year }}</td>
+            <td>{{ item.VIN }}</td>
+            <td>{{ item.FuelType }}</td>
+            <td>{{ item.Capacity }}</td>
+            <td>{{ item.Status }}</td>
+            <td>{{ item.Drive }}</td>
+            <td>{{ item.Gearbox }}</td>
+            <td>{{ item.Price }}</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        currency: null,
+        error_occured: false,
+        loading_page: true
+      },
+      mounted () {
+        axios
+        .get('https://my.api.mockaroo.com/cars/123?key=e9aed950&fbclid=IwAR2trX5Bxz7hcFwBSGtIXlXRsibznOZhlqPG5onX4ccNeOWlbcZ-EpDj_x0')
+        .then(response => (this.currency = response.data))
+        .catch(error => {
+            console.log(error),
+            this.error_occured = true
+        })
+        .finally(() => this.loading_page = false)
+      }
+    });
+  </script>
+
+  <style>
+    #app {
+        /* margin: auto; */
+        width: 2200px;
+        font-size: 25px;
+    }
+    table, th, td {
+      border: 2px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 15px;
+    }
+  </style>
+</body>
+
+</html>
