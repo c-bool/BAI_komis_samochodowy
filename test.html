@@ -6,6 +6,7 @@
   <title>Currency</title>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="app.js" defer></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -48,27 +49,6 @@
       </div>
     </section>
   </div>
-
-  <script>
-    var app = new Vue({
-      el: '#app',
-      data: {
-        currency: null,
-        error_occured: false,
-        loading_page: true
-      },
-      mounted () {
-        axios
-        .get('https://my.api.mockaroo.com/cars/123?key=e9aed950&fbclid=IwAR2trX5Bxz7hcFwBSGtIXlXRsibznOZhlqPG5onX4ccNeOWlbcZ-EpDj_x0')
-        .then(response => (this.currency = response.data))
-        .catch(error => {
-            console.log(error),
-            this.error_occured = true
-        })
-        .finally(() => this.loading_page = false)
-      }
-    });
-  </script>
 
   <style>
     #app {
