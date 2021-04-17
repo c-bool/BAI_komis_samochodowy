@@ -29,7 +29,7 @@ header {
   padding: 1rem;
   text-align: center;
   width: 90%;
-  max-width: 40rem;
+  max-width: 100rem;
 }
 
 #app h2 {
@@ -83,7 +83,7 @@ table, th, td {
   padding: 1rem;
   text-align: center;
   width: 90%;
-  max-width: 10rem;
+  max-width: auto;
 }
 
 .topnav {
@@ -108,16 +108,5 @@ table, th, td {
 .topnav a.active {
   background-color: #4CAF50;
   color: white;
-}
-label {
-  padding: 10px 15px;
-  background: #f2f2f2;
-  color: #4D4D4D;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
-  text-align: center;
-  -webkit-border-radius: 6px 6px 0px 0px;
-  border-radius: 6px 6px 0px 0px;
 }
 

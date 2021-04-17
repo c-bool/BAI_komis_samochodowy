@@ -56,13 +56,13 @@
     <div v-show='search.toggle'>
       <h2>Wyszukaj swoj nowy samochod</h2>
       <div class="form">
-        <p>Marka samochodu:
+        <p>Marka samochodu:<br>
           <select v-model="search.Make">
             <option disabled value="">Wybierz:</option>
             <option v-for="item in brand_list">{{ item }}</option>
           </select>
         </p>
-        <p>Stan:
+        <p>Stan:<br>
           <input type="checkbox" id="s1" value="New" v-model="search.Status">
           <label for="s1">Nowy</label><br>
           <input type="checkbox" id="s2" value="Used" v-model="search.Status">
@@ -80,7 +80,7 @@
           <input type="checkbox" id="f5" value="Gasoline + LPG" v-model="search.FuelType">
           <label for="f5">Benzyna + LPG</label><br>
         </p>
-        <p>Naped:
+        <p>Naped:<br>
           <input type="checkbox" id="d1" value="Front" v-model="search.Drive">
           <label for="d1">Na przod</label><br>
           <input type="checkbox" id="d2" value="Rear" v-model="search.Drive">
@@ -88,13 +88,13 @@
           <input type="checkbox" id="d3" value="4x4" v-model="search.Drive">
           <label for="d3">Na 4 kola</label><br>
         </p>
-        <p>Skrzynia biegow:
+        <p>Skrzynia biegow:<br>
           <input type="checkbox" id="g1" value="Automatic" v-model="search.Gearbox">
           <label for="g1">Automatyczna</label><br>
           <input type="checkbox" id="g2" value="Manual" v-model="search.Gearbox">
           <label for="g2">Manualna</label><br>
         </p>
-        <input type="button" class="btn btn-primary" v-on:click="filter()" value="Szukaj">
+        <button v-on:click="filter()">Szukaj</button>
       </div>
 
       <table class="table">
