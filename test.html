@@ -10,16 +10,25 @@
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="app.js" defer></script>
+  <script src="component.js" defer></script>
 </head>
 
 <body>
   <header>
     <h1>Witamy w komisie samochodowym</h1>
+    <div class="topnav">
+      <a href="#home">Oferta</a>
+      <a href="#news">PlaceHolder</a>
+      <a href="#contact">Kontakt</a>
+      <a href="#about">O nas</a>
+    </div>
   </header>
+
   <div id="app">
-    <h2>Dostępne Marki</h2>
+    <button v-on:click="fetch()">Wyświetl dostępne samochody1</button>
     <button v-on:click="fetch(), toggle=!toggle">Wyświetl dostępne samochody</button>
     <div v-show='toggle'>
+      <h2>Dostępne Marki</h2>
       <div v-if="loading_page">
         Loading page...
       </div>
@@ -36,6 +45,7 @@
         </table>
       </div>
     </div>
+  </div>
   </div>
 </body>
 
