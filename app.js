@@ -17,17 +17,6 @@ var app = new Vue({
     filteredCurrency: []
   },
   methods:{ 
-    fetch(){
-    axios
-    //.get('https://my.api.mockaroo.com/cars/123?key=e9aed950&fbclid=IwAR2trX5Bxz7hcFwBSGtIXlXRsibznOZhlqPG5onX4ccNeOWlbcZ-EpDj_x0')
-    .get('https://raw.githubusercontent.com/c-bool/BAI_komis_samochodowy/main/dane.json')
-    .then(response => (this.currency = response.data))
-    .catch(error => {
-        console.log(error),
-        this.error_occured = true
-    })
-    .finally(() => this.loading_page = false)
-  },
     make_list(){
       for (var element of this.currency){
         this.brand_list.indexOf(element.Make) === -1 ? this.brand_list.push(element.Make) : null;
@@ -40,7 +29,18 @@ var app = new Vue({
         }
       }
     }
-}
+  },
+  mounted() {
+    axios
+      //.get('https://my.api.mockaroo.com/cars/123?key=e9aed950&fbclid=IwAR2trX5Bxz7hcFwBSGtIXlXRsibznOZhlqPG5onX4ccNeOWlbcZ-EpDj_x0')
+      .get('https://raw.githubusercontent.com/c-bool/BAI_komis_samochodowy/main/dane.json')
+      .then(response => (this.currency = response.data))
+      .catch(error => {
+        console.log(error),
+        this.error_occured = true
+      })
+      .finally(() => this.loading_page = false)
+  }
 });
 
 
