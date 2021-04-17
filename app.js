@@ -19,7 +19,8 @@ var app = new Vue({
   methods:{ 
     fetch(){
     axios
-    .get('https://my.api.mockaroo.com/cars/123?key=e9aed950&fbclid=IwAR2trX5Bxz7hcFwBSGtIXlXRsibznOZhlqPG5onX4ccNeOWlbcZ-EpDj_x0')
+    //.get('https://my.api.mockaroo.com/cars/123?key=e9aed950&fbclid=IwAR2trX5Bxz7hcFwBSGtIXlXRsibznOZhlqPG5onX4ccNeOWlbcZ-EpDj_x0')
+    .get('https://raw.githubusercontent.com/c-bool/BAI_komis_samochodowy/main/dane.json')
     .then(response => (this.currency = response.data))
     .catch(error => {
         console.log(error),
