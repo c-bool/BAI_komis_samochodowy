@@ -33,9 +33,9 @@
         Loading page...
       </div>
       <div v-else>
-        <h2>Dostępne Marki</h2>
-        <button v-on:click="toggle=!toggle">Wyświetl dostępne samochody</button>
-        <button v-on:click="make_list(), search.toggle=!search.toggle">Wyszukaj samochód</button>
+        <h2>Dostepne Marki</h2>
+        <button v-on:click="toggle=!toggle">Wyswietl dostepne samochody</button>
+        <button v-on:click="make_list(), search.toggle=!search.toggle">Wyszukaj samochod</button>
       </div>
     </section>
     <!-- <h2>Dostępne Marki</h2>
@@ -54,7 +54,7 @@
       </table>
     </div>
     <div v-show='search.toggle'>
-      <h2>Wyszukaj swój nowy samochód</h2>
+      <h2>Wyszukaj swoj nowy samochod</h2>
       <div class="form">
         <p>Marka samochodu:
           <select v-model="search.Make">
@@ -73,26 +73,26 @@
           <label for="f1">Benzyna</label><br>
           <input type="checkbox" id="f2" value="Hybrid" v-model="search.FuelType">
           <label for="f2">Hybryda</label><br>
-          <input type="checkbox" id="f3" value="Disel" v-model="search.FuelType">
-          <label for="f3">Disel</label><br>
+          <input type="checkbox" id="f3" value="Diesel" v-model="search.FuelType">
+          <label for="f3">Diesel</label><br>
           <input type="checkbox" id="f4" value="Electric" v-model="search.FuelType">
           <label for="f4">Elektryczny</label><br>
           <input type="checkbox" id="f5" value="Gasoline + LPG" v-model="search.FuelType">
           <label for="f5">Benzyna + LPG</label><br>
         </p>
-        <p>Napęd:
+        <p>Naped:
           <input type="checkbox" id="d1" value="Front" v-model="search.Drive">
-          <label for="d1">Na przód</label><br>
+          <label for="d1">Na przod</label><br>
           <input type="checkbox" id="d2" value="Rear" v-model="search.Drive">
-          <label for="d2">Na tył</label><br>
+          <label for="d2">Na tyl</label><br>
           <input type="checkbox" id="d3" value="4x4" v-model="search.Drive">
-          <label for="d3">Na 4 koła</label><br>
+          <label for="d3">Na 4 kola</label><br>
         </p>
-        p>Skrzynia biegów:
-        <input type="checkbox" id="g1" value="Automatic" v-model="search.Gearbox">
-        <label for="g1">Automatyczna</label><br>
-        <input type="checkbox" id="g2" value="Manual" v-model="search.Gearbox">
-        <label for="g2">Manualna</label><br>
+        <p>Skrzynia biegow:
+          <input type="checkbox" id="g1" value="Automatic" v-model="search.Gearbox">
+          <label for="g1">Automatyczna</label><br>
+          <input type="checkbox" id="g2" value="Manual" v-model="search.Gearbox">
+          <label for="g2">Manualna</label><br>
         </p>
         <input type="button" class="btn btn-primary" v-on:click="filter()" value="Szukaj">
       </div>
@@ -105,10 +105,10 @@
             <td><b>Rocznik</b></td>
             <td><b>VIN</b></td>
             <td><b>Rodzaj paliwa</b></td>
-            <td><b>Pojemność</b></td>
+            <td><b>Pojemnosc</b></td>
             <td><b>Stan</b></td>
-            <td><b>Rodzaj napędu</b></td>
-            <td><b>Skrzynia biegów</b></td>
+            <td><b>Rodzaj napedu</b></td>
+            <td><b>Skrzynia biegow</b></td>
             <td><b>Cena</b></td>
           </tr>
         </thead>
