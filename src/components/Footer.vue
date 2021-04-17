@@ -11,17 +11,19 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 60px;
-  background-color: #41608c;
+  height: 30px;
+  background-color: #222;
 }
 
 .container .text-muted {
-  margin: 20px 0;
-  color: white !important;
+  margin: 0 0;
+  color: rgb(255, 255, 255) !important;
+  text-align: center;
+  font-weight: bold;
 }
 
 .footer > .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: auto;
+  padding-left: auto;
 }
 </style>
