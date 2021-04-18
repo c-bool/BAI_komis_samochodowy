@@ -58,7 +58,7 @@
         <b>Drive</b><br />
         <input type="checkbox" id="d1" value="Front" v-model="search.Drive" />
         <label for="d1">Front wheels</label><br />
-        <input type="checkbox" id="d2" value="Rear" v-model="search.Drive" />
+        <input type="checkbox" id="d2" value="Back" v-model="search.Drive" />
         <label for="d2">Back wheels</label><br />
         <input type="checkbox" id="d3" value="4x4" v-model="search.Drive" />
         <label for="d3">4x4</label><br />
