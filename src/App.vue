@@ -41,6 +41,11 @@ button {
   color: #000000ad;
 }
 
+.component-container{
+  margin: auto;
+  text-align: center;
+}
+
 * {
   margin: 0;
   padding: 0;

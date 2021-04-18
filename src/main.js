@@ -7,6 +7,7 @@ import ChartsAndDiagrams from "./components/ChartsAndDiagrams.vue";
 import SearchVehicles from "./components/SearchVehicles.vue";
 import Contact from "./components/Contact.vue";
 import Home from "./components/Home.vue";
+import OneMark from "./components/OneMark.vue";
 
 
 async function fetchData() {
@@ -20,6 +21,7 @@ async function fetchData() {
     {path: '/AllVehicles', component: AllVehicles,  props: {
       cars: cars,
     }},
+    {path: '/AllVehicles/:markName', name: 'vehicle-mark', props: true, component: OneMark},
     {path: '/ChartsAndDiagrams', component: ChartsAndDiagrams,props: {
       cars: cars,
     }},
