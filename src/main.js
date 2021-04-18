@@ -9,8 +9,9 @@ import Contact from "./components/Contact.vue";
 import Home from "./components/Home.vue";
 
 
-async function githubUsers() {
-  let response = await fetch('https://my.api.mockaroo.com/cars/123?key=e9aed950&fbclid=IwAR2trX5Bxz7hcFwBSGtIXlXRsibznOZhlqPG5onX4ccNeOWlbcZ-EpDj_x0')
+async function fetchData() {
+  // let response = await fetch('https://my.api.mockaroo.com/cars/123?key=e9aed950&fbclid=IwAR2trX5Bxz7hcFwBSGtIXlXRsibznOZhlqPG5onX4ccNeOWlbcZ-EpDj_x0')
+  let response = await fetch('https://raw.githubusercontent.com/c-bool/BAI_komis_samochodowy/main/dane.json')
   const cars = await response.json()
   console.log(cars)
   
@@ -18,7 +19,7 @@ async function githubUsers() {
   const routes = [
     {path: '/AllVehicles', component: AllVehicles,  props: {
       cars: cars,
-    }, },
+    }},
     {path: '/ChartsAndDiagrams', component: ChartsAndDiagrams,props: {
       cars: cars,
     }},
@@ -38,5 +39,5 @@ async function githubUsers() {
 }
 
 
-githubUsers() 
+fetchData() 
 
