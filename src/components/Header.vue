@@ -1,4 +1,4 @@
-<template>
+npm <template>
   <div class="jumbotron text-center" id="header">
     <h1>Car Dealer</h1>
     <p>Place, where you can buy your dream car</p>
