@@ -1,8 +1,12 @@
-npm <template>
+<template>
+<div class="back">
   <div class="jumbotron text-center" id="header">
-    <h1>Car Dealer</h1>
-    <p>Place, where you can buy your dream car</p>
+    <h1 id="title"></h1>
+    
   </div>
+ 
+  </div>
+   <p id="desc">Place, where you can buy your dream car</p>
 </template>
 
 <style scoped>
@@ -11,5 +15,22 @@ npm <template>
   background-image: url("../assets/homepage.jpg");
   background-size: cover;
   color: white;
+  margin-left: 25%;
+}
+
+h1#title[data-v-61dd7a3d] {
+    margin-top: -85px;
+    padding: 95px;
+}
+.back {
+    background-color: black;
+}
+p#desc{
+    position: absolute;
+    top: 70px;
+    left: 7%;
+    color: #a65c6d;
+    font-size: 27px;
+    font-family: fantasy;
 }
 </style>

@@ -3,17 +3,17 @@
     <h1>List of available cars:</h1>
     <div class="row" v-for="i in Math.ceil(brand_list.length / 5)" :key="i.id">
       <span v-for="item in brand_list.slice((i - 1) * 5, i * 5)" :key="item.id">
-        <div class="menu-item">
-          <a href="#"
-            ><router-link
+        
+          <a class="list-group-item list-group-item-action" href="#"
+            ><div  class="list-group"><router-link
               :to="{
                 name: 'vehicle-mark',
                 params: { markName: item, carsdata: JSON.stringify(cars) },
               }"
               >{{ item }}</router-link
-            ></a
+            >  </div></a
           >
-        </div>
+      
       </span>
     </div>
   </div>
@@ -52,12 +52,26 @@ export default {
 span {
   display: table;
   margin: 0 auto;
+  padding: 10px;
 }
 
 .row {
-  border: solid 1px #404040;
-  padding: 10px;
-    text-align: left; 
 
+  padding: 10px;
+  text-align: left; 
+  display: table-cell;
+}
+.component-container {
+    margin: auto;
+    text-align: center;
+       margin-left: 10%;
+    margin-right: 10%;
+}
+/* a.list-group-item.list-group-item-action {
+    background-color: rgb(59, 59, 59);
+} */
+.list-group a {
+    color: #272727;
+    text-decoration: auto;
 }
 </style>

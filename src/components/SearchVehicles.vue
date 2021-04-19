@@ -1,86 +1,86 @@
 <template>
   <div id="searchTool">
     <h2>Find your new car</h2>
-    <div class="form">
+    <div class="form-group">
       <p>
         <b>Brand:</b><br />
-        <select v-model="search.Make">
+        <select  class="form-control" v-model="search.Make">
           <option disabled value="">Choose:</option>
           <option v-for="item in brand_list" :key="item.id">{{ item }}</option>
         </select>
       </p>
       <p>
         <b>Condition:</b><br />
-        <input type="checkbox" id="s1" value="New" v-model="search.Status" />
-        <label for="s1">New</label><br />
-        <input type="checkbox" id="s2" value="Used" v-model="search.Status" />
-        <label for="s2">Used</label><br />
+        <input class="form-check-input" type="checkbox" id="s1" value="New" v-model="search.Status" />
+        <label  class="form-check-label" for="s1">New</label><br />
+        <input class="form-check-input" type="checkbox" id="s2" value="Used" v-model="search.Status" />
+        <label  class="form-check-label" for="s2">Used</label><br />
       </p>
       <p>
         <b>Fuel type:</b><br />
-        <input
+        <input  class="form-check-input"
           type="checkbox"
           id="f1"
           value="Gasoline"
           v-model="search.FuelType"
         />
-        <label for="f1">Gasoline</label><br />
-        <input
+        <label class="form-check-label" for="f1">Gasoline</label><br />
+        <input  class="form-check-input"
           type="checkbox"
           id="f2"
           value="Hybrid"
           v-model="search.FuelType"
         />
-        <label for="f2">Hybrid</label><br />
-        <input
+        <label class="form-check-label" for="f2">Hybrid</label><br />
+        <input  class="form-check-input"
           type="checkbox"
           id="f3"
           value="Diesel"
           v-model="search.FuelType"
         />
-        <label for="f3">Diesel</label><br />
-        <input
+        <label class="form-check-label" for="f3">Diesel</label><br />
+        <input  class="form-check-input"
           type="checkbox"
           id="f4"
           value="Electric"
           v-model="search.FuelType"
         />
-        <label for="f4">Electric</label><br />
-        <input
+        <label class="form-check-label" for="f4">Electric</label><br />
+        <input  class="form-check-input"
           type="checkbox"
           id="f5"
           value="Gasoline + LPG"
           v-model="search.FuelType"
         />
-        <label for="f5">Gasoline + LPG</label><br />
+        <label class="form-check-label" for="f5">Gasoline + LPG</label><br />
       </p>
       <p>
         <b>Drive</b><br />
-        <input type="checkbox" id="d1" value="Front" v-model="search.Drive" />
-        <label for="d1">Front wheels</label><br />
-        <input type="checkbox" id="d2" value="Back" v-model="search.Drive" />
-        <label for="d2">Back wheels</label><br />
-        <input type="checkbox" id="d3" value="4x4" v-model="search.Drive" />
-        <label for="d3">4x4</label><br />
+        <input   class="form-check-input" type="checkbox" id="d1" value="Front" v-model="search.Drive" />
+        <label class="form-check-label" for="d1">Front wheels</label><br />
+        <input  class="form-check-input"  type="checkbox" id="d2" value="Back" v-model="search.Drive" />
+        <label class="form-check-label" for="d2">Back wheels</label><br />
+        <input  class="form-check-input" type="checkbox" id="d3" value="4x4" v-model="search.Drive" />
+        <label class="form-check-label" for="d3">4x4</label><br />
       </p>
       <p>
         <b>Gearbox</b><br />
-        <input
+        <input class="form-check-input"
           type="checkbox"
           id="g1"
           value="Automatic"
           v-model="search.Gearbox"
         />
-        <label for="g1">Automatic</label><br />
-        <input
+        <label class="form-check-label" for="g1">Automatic</label><br />
+        <input  class="form-check-input"
           type="checkbox"
           id="g2"
           value="Manual"
           v-model="search.Gearbox"
         />
-        <label for="g2">Manual</label><br />
+        <label class="form-check-label" for="g2">Manual</label><br />
       </p>
-      <button class="but_filt" v-on:click="filter(), search.toggle = true">Search</button>
+      <button class="btn btn-primary mb-2" v-on:click="filter(), search.toggle = true">Search</button>
     </div>
     <div v-if="search.toggle">
       <div v-if="filteredCars === null">No results</div>
@@ -169,6 +169,14 @@ export default {
 };
 </script>
 <style>
+div#searchTool {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+.form-group {
+    display: flex;
+    justify-content: space-around;
+}
   .form {
     margin-left: 30px;
     margin-top: 30px;
@@ -188,5 +196,8 @@ table.table {
     margin-right: auto;
     margin-top: 10px;
     background-color: #dddddd;
+}
+button.btn.btn-primary.mb-2 {
+    margin-top: 110px;
 }
 </style>

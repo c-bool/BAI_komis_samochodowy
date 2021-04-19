@@ -1,9 +1,15 @@
-  
+
 <template>
-  <div>
-    <Chart :brands="brand_list" :quantity="quantity_list" :options="options" />
-    <ChartDonut :fuelType="fuel_brand_list" :quantity="fuel_quantity_list" :options="options"/>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <Chart :brands="brand_list" :quantity="quantity_list" :options="options" />
+    </div>
+    <div class="col-sm">
+      <ChartDonut :fuelType="fuel_brand_list" :quantity="fuel_quantity_list" :options="options"/>
+    </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -80,3 +86,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+div#carouselExampleIndicators {
+    padding: 150px;
+}
+</style>

@@ -8,7 +8,11 @@ import SearchVehicles from "./components/SearchVehicles.vue";
 import Contact from "./components/Contact.vue";
 import Home from "./components/Home.vue";
 import OneMark from "./components/OneMark.vue";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap";
+import 'jquery/src/jquery.js';
+import 'popper.js/dist/popper.min.js';
+import 'bootstrap/dist/js/bootstrap.min.js'
 
 async function fetchData() {
   // let response = await fetch('https://my.api.mockaroo.com/cars/123?key=e9aed950&fbclid=IwAR2trX5Bxz7hcFwBSGtIXlXRsibznOZhlqPG5onX4ccNeOWlbcZ-EpDj_x0')
