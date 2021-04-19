@@ -1,10 +1,10 @@
 <script>
 import { defineComponent } from 'vue'
-import { Doughnut } from 'vue3-chart-v2'
+import { Line } from 'vue3-chart-v2'
 
 export default defineComponent({
-  name: 'Doughnut',
-  extends: Doughnut,
+  name: 'LineChart',
+  extends: Line,
   props:{
     labels:{
       type: Array,
@@ -13,18 +13,16 @@ export default defineComponent({
     data:{
       type: Array,
       default: null
-    },
-    options:{
-      type: Object
     }
   },
   mounted () {
+    // Overwriting base render method with actual data.
     this.renderChart({
       labels: this.labels,
       datasets: [
         {
-          label: 'Fuel Type',
-        backgroundColor: ['rgb(255, 99, 132)', 'rgb(255, 159, 64)', 'rgb(153, 102, 255)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)'],
+          label: 'Number of electric cars bought over years',
+          backgroundColor: '#d142f5',
           data: this.data
         }
       ]

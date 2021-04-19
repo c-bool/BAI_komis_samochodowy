@@ -1,8 +1,8 @@
   
 <template>
   <div>
-    <Chart :brands="brand_list" :quantity="quantity_list" :options="options" />
-    <ChartDonut :fuelType="fuel_brand_list" :quantity="fuel_quantity_list" :options="options"/>
+    <Chart :labels="brand_list" :data="quantity_list" :options="options" />
+    <ChartDonut :labels="fuel_brand_list" :data="fuel_quantity_list" :options="options"/>
   </div>
 </template>
 

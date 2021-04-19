@@ -8,6 +8,7 @@ import SearchVehicles from "./components/SearchVehicles.vue";
 import Contact from "./components/Contact.vue";
 import Home from "./components/Home.vue";
 import OneMark from "./components/OneMark.vue";
+import About from "./components/About.vue";
 
 
 async function fetchData() {
@@ -15,8 +16,15 @@ async function fetchData() {
   let response = await fetch('https://raw.githubusercontent.com/c-bool/BAI_komis_samochodowy/main/dane.json')
   const cars = await response.json()
   console.log(cars)
-  
-  
+  //let responseSecond = await fetch('https://my.api.mockaroo.com/amount.json?key=e9aed950')
+  let responseSecond = await fetch('https://raw.githubusercontent.com/c-bool/BAI_komis_samochodowy/main/amountYear.json') // 
+  const amountYear = await responseSecond.json()
+
+  //let responeThird = await fetch('https://my.api.mockaroo.com/city.json?key=e9aed950') 
+  let responeThird = await fetch('https://raw.githubusercontent.com/c-bool/BAI_komis_samochodowy/new_app_devel/city.json')  
+  const cityStreet = await responeThird.json()
+  //console.log(amountYear)
+ 
   const routes = [
     {path: '/AllVehicles', component: AllVehicles,  props: {
       cars: cars,
@@ -29,7 +37,12 @@ async function fetchData() {
       cars: cars,
     }},
     {path: '/Contact', component: Contact},
-    {path: '/', component: Home}
+    {path: '/About', component: About, props: {
+      amountYear: amountYear,
+    }},
+    {path: '/', component: Home, props: {
+      cityStreet: cityStreet,
+    }}
   ];
 
   const router = createRouter({

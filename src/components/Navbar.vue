@@ -5,6 +5,7 @@
     <div class="menu-item"><a href="#"><router-link to="/SearchVehicles">Search Vehicles</router-link></a></div>
     <div class="menu-item"><a href="#"><router-link to="/ChartsAndDiagrams">Charts and diagrams</router-link></a></div>
     <div class="menu-item"><a href="#"><router-link to="/Contact">Contact</router-link></a></div>
+    <div class="menu-item"><a href="#"><router-link to="/About">About</router-link></a></div>
   </nav>
 </template>
 
