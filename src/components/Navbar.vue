@@ -26,7 +26,7 @@ nav .menu-item {
 }
 nav .menu-item.active,
 nav .menu-item:hover {
-  background-color: #444;
+  background-color: #363945;
   border-bottom-color: #a32424;
 }
 nav .menu-item a {

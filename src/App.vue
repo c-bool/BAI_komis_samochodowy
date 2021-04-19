@@ -3,9 +3,11 @@
     <header>
       <Navbar />
     </header>
-    <Header />
-    <router-view></router-view>
-    <Footer />
+    <body>
+      <Header />
+      <router-view></router-view>
+      <Footer />
+    </body>
   </div>
 </template>
 
@@ -13,7 +15,6 @@
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import Navbar from "./components/Navbar.vue";
-
 
 export default {
   name: "App",
@@ -36,12 +37,13 @@ body {
   margin-bottom: 60px;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
   color: #000000ad;
+  background-color: 	#D8D8D8;
 }
 button {
   color: #000000ad;
 }
 
-.component-container{
+.component-container {
   margin: auto;
   text-align: center;
 }

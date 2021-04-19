@@ -12,12 +12,12 @@
   bottom: 0;
   width: 100%;
   height: 30px;
-  background-color: #222;
+  background-color:	#D8D8D8;
 }
 
 .container .text-muted {
   margin: 0 0;
-  color: rgb(255, 255, 255) !important;
+  color: rgb(7, 7, 7) !important;
   text-align: center;
   font-weight: bold;
 }
