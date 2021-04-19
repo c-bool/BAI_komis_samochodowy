@@ -1,8 +1,10 @@
 <template>
+<div class="page">
+  <a class="btn btn-dark" href="#" role="button"><router-link to="/AllVehicles">Back</router-link></a>
   <div v-if="filteredMark === null">No results</div>
-  <div v-else>
-    <table class="table">
-      <thead>
+  <div  v-else>
+    <table class="table table-striped table-dark">
+      <thead class="thead-dark">
         <tr>
           <td><b>Brand</b></td>
           <td><b>Model</b></td>
@@ -31,6 +33,7 @@
         </tr>
       </tbody>
     </table>
+  </div>
   </div>
 </template>
 
@@ -69,10 +72,17 @@ export default {
 
 <style>
 table.table {
-    margin-left: 30px;
+    margin-left: 0px;
     margin-right: auto;
     margin-top: 10px;
     background-color: #dddddd;
 }
-
+.btn a {
+    color: #ffffff!important;
+    text-decoration: underline;
+}
+.page {
+    margin-left: 30px;
+    margin-right: 30px;
+}
 </style>

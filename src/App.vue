@@ -16,6 +16,7 @@ import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import Navbar from "./components/Navbar.vue";
 
+
 export default {
   name: "App",
   components: {
@@ -28,7 +29,7 @@ export default {
 
 
 <style>
-@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* @import url("../node_modules/bootstrap/dist/css/bootstrap.min.css"); */
 html {
   position: relative;
   min-height: 100%;
@@ -57,6 +58,10 @@ button {
 header {
   width: 100vw;
   background-color: #222;
-  padding: 15px;
+  margin-top: -15px;
+}
+.jumbotron {
+    background-color: #000000;
+    border-radius: .0!important;
 }
 </style>
