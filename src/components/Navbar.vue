@@ -2,24 +2,24 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <div class="elo">
-    <a class="navbar-brand" href="#"><router-link to="/">CAR DEALER</router-link></a>
+    <a class="navbar-brand" href="#"><router-link to="/BAI_komis_samochodowy/">CAR DEALER</router-link></a>
     </div>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#"><router-link to="/AllVehicles">All Vehicles</router-link></a>
+          <a class="nav-link" href="#"><router-link to="/BAI_komis_samochodowy/AllVehicles">All Vehicles</router-link></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><router-link to="/SearchVehicles">Search Vehicles</router-link></a>
+          <a class="nav-link" href="#"><router-link to="/BAI_komis_samochodowy/SearchVehicles">Search Vehicles</router-link></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><router-link to="/ChartsAndDiagrams">Charts and diagrams</router-link></a>
+          <a class="nav-link" href="#"><router-link to="/BAI_komis_samochodowy/ChartsAndDiagrams">Charts and diagrams</router-link></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><router-link to="/About">Stats</router-link></a>
+          <a class="nav-link" href="#"><router-link to="/BAI_komis_samochodowy/About">Stats</router-link></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><router-link to="/Contact">Contact</router-link></a>
+          <a class="nav-link" href="#"><router-link to="/BAI_komis_samochodowy/Contact">Contact</router-link></a>
         </li>
       </ul>
     </div>

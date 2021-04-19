@@ -4,8 +4,8 @@
         <p class="text">
           Daniel Drużkowski<br />
           Paweł Cebula<br />
-          Antos Michał<br />
-          Abramczyk Jakub<br />
+          Michał Antos<br />
+          Jakub Abramczyk<br />
         </p>
       </div>
   </body>

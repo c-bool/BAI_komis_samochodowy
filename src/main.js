@@ -14,7 +14,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
 import 'jquery/src/jquery.js';
 import 'popper.js/dist/popper.min.js';
-import 'bootstrap/dist/js/bootstrap.min.js'
+import 'bootstrap/dist/js/bootstrap.min.js';
 
 async function fetchData() {
   // let response = await fetch('https://my.api.mockaroo.com/cars/123?key=e9aed950&fbclid=IwAR2trX5Bxz7hcFwBSGtIXlXRsibznOZhlqPG5onX4ccNeOWlbcZ-EpDj_x0')
@@ -31,21 +31,21 @@ async function fetchData() {
   //console.log(amountYear)
  
   const routes = [
-    {path: '/AllVehicles', component: AllVehicles,  props: {
+    {path: '/BAI_komis_samochodowy/AllVehicles', component: AllVehicles,  props: {
       cars: cars,
     }},
-    {path: '/AllVehicles/:markName', name: 'vehicle-mark', props: true, component: OneMark},
-    {path: '/ChartsAndDiagrams', component: ChartsAndDiagrams,props: {
+    {path: '/BAI_komis_samochodowy/AllVehicles/:markName', name: 'vehicle-mark', props: true, component: OneMark},
+    {path: '/BAI_komis_samochodowy/ChartsAndDiagrams', component: ChartsAndDiagrams,props: {
       cars: cars,
     }},
-    {path: '/SearchVehicles', component: SearchVehicles, props: {
+    {path: '/BAI_komis_samochodowy/SearchVehicles', component: SearchVehicles, props: {
       cars: cars,
     }},
-    {path: '/Contact', component: Contact},
-    {path: '/About', component: About, props: {
+    {path: '/BAI_komis_samochodowy/Contact', component: Contact},
+    {path: '/BAI_komis_samochodowy/About', component: About, props: {
       amountYear: amountYear,
     }},
-    {path: '/', component: Home, props: {
+    {path: '/BAI_komis_samochodowy/', component: Home, props: {
       cityStreet: cityStreet,
     }}
   ];

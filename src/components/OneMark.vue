@@ -1,6 +1,6 @@
 <template>
 <div class="page">
-  <a class="btn btn-dark" href="#" role="button"><router-link to="/AllVehicles">Back</router-link></a>
+  <a class="btn btn-dark" href="#" role="button"><router-link to="/BAI_komis_samochodowy/AllVehicles">Back</router-link></a>
   <div v-if="filteredMark === null">No results</div>
   <div  v-else>
     <table class="table table-striped table-dark">

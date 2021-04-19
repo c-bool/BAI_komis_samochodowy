@@ -56,7 +56,6 @@ span {
 }
 
 .row {
-
   padding: 10px;
   text-align: left; 
   display: table-cell;
@@ -64,7 +63,7 @@ span {
 .component-container {
     margin: auto;
     text-align: center;
-       margin-left: 10%;
+    margin-left: 10%;
     margin-right: 10%;
 }
 /* a.list-group-item.list-group-item-action {
