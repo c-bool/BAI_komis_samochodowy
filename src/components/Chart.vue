@@ -5,18 +5,37 @@ import { Bar } from 'vue3-chart-v2'
 export default defineComponent({
   name: 'MonthlyChart',
   extends: Bar,
-  props: {
-    chartData: {
-      type: Object,
-      required: true
+  props:{
+    brands:{
+      type: Array,
+      default: null
     },
-    chartOptions: {
-      type: Object,
-      required: false
-    },
+    quantity:{
+      type: Array,
+      default: null
+    }
   },
   mounted () {
-    this.renderChart(this.chartData, this.chartOptions)
+    // Overwriting base render method with actual data.
+    this.renderChart({
+      labels: this.brands,
+      datasets: [
+        {
+          label: 'Number of cars from each brand',
+          backgroundColor: '#f87979',
+          data: this.quantity
+        }
+      ],
+      options: {
+        scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    }
+      }
+    })
   }
 })
 </script>

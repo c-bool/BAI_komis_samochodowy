@@ -1,51 +1,49 @@
   
 <template>
-  <Chart v-bind:chartData="chartData" :chartOptions="chartOptions" />
+  <Chart :brands="brand_list" :quantity="quantity_list"/>
 </template>
 
 <script>
 import Chart from "./Chart.vue";
-import { defineComponent } from "vue";
-export default defineComponent({
+export default {
+  components: {
+    Chart,
+  },
   props: {
     cars: {
       type: undefined,
       required: true,
     },
   },
-
-  components: {
-    Chart,
-  },
   data() {
     return {
-      chartOptions: {
-        height: 10
-      },
-      chartData: {
-        labels: [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
-          "August",
-          "September",
-          "October",
-          "November",
-          "December",
-        ],
-        datasets: [
-          {
-            label: "GitHub Commits",
-            backgroundColor: "#f87979",
-            data: [40, 20, 12, 39, 10, 40, 39, 80, 40, 20, 12, 11],
-          },
-        ],
-      },
+      brand_list: [],
+      quantity_list: [],
+      list: [],
+      cars_dict: {},
     };
   },
-});
+  methods: {
+    make_list() {
+      for (var element of this.cars) {
+        this.list.push(element.Make);
+      }
+      var initialValue = {};
+      var reducer = function (tally, vote) {
+        if (!tally[vote]) {
+          tally[vote] = 1;
+        } else {
+          tally[vote] = tally[vote] + 1;
+        }
+        return tally;
+      };
+      this.cars_dict = this.list.reduce(reducer, initialValue);
+      this.brand_list = Object.keys(this.cars_dict);
+      this.quantity_list = Object.values(this.cars_dict);
+    },
+  },
+  created() {
+    this.make_list();
+  },
+};
 </script>
