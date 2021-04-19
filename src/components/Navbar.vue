@@ -1,10 +1,10 @@
 <template>
   <nav>
-    <div class="menu-item"><a href="#"><router-link to="/BAI_komis_samochodowy">Home</router-link></a></div>
-    <div class="menu-item"><a href="#"><router-link to="/BAI_komis_samochodowy/AllVehicles">All Vehicles</router-link></a></div>
-    <div class="menu-item"><a href="#"><router-link to="/BAI_komis_samochodowy/SearchVehicles">Search Vehicles</router-link></a></div>
-    <div class="menu-item"><a href="#"><router-link to="/BAI_komis_samochodowy/ChartsAndDiagrams">Charts and diagrams</router-link></a></div>
-    <div class="menu-item"><a href="#"><router-link to="/BAI_komis_samochodowy/Contact">Contact</router-link></a></div>
+    <div class="menu-item"><a href="#"><router-link to="/">Home</router-link></a></div>
+    <div class="menu-item"><a href="#"><router-link to="/AllVehicles">All Vehicles</router-link></a></div>
+    <div class="menu-item"><a href="#"><router-link to="/SearchVehicles">Search Vehicles</router-link></a></div>
+    <div class="menu-item"><a href="#"><router-link to="/ChartsAndDiagrams">Charts and diagrams</router-link></a></div>
+    <div class="menu-item"><a href="#"><router-link to="/Contact">Contact</router-link></a></div>
   </nav>
 </template>
 
