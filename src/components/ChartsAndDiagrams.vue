@@ -28,16 +28,16 @@ export default {
       for (var element of this.cars) {
         this.list.push(element.Make);
       }
-      var initialValue = {};
-      var reducer = function (tally, vote) {
-        if (!tally[vote]) {
-          tally[vote] = 1;
+      var initialCarsDict = {};
+      var reducer = function (currentTotalCarsDict, currentCarMark) {
+        if (!currentTotalCarsDict[currentCarMark]) {
+          currentTotalCarsDict[currentCarMark] = 1;
         } else {
-          tally[vote] = tally[vote] + 1;
+          currentTotalCarsDict[currentCarMark] = currentTotalCarsDict[currentCarMark] + 1;
         }
-        return tally;
+        return currentTotalCarsDict;
       };
-      this.cars_dict = this.list.reduce(reducer, initialValue);
+      this.cars_dict = this.list.reduce(reducer, initialCarsDict);
       this.brand_list = Object.keys(this.cars_dict);
       this.quantity_list = Object.values(this.cars_dict);
     },
