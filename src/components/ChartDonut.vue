@@ -1,12 +1,12 @@
 <script>
 import { defineComponent } from 'vue'
-import { Bar } from 'vue3-chart-v2'
+import { Doughnut } from 'vue3-chart-v2'
 
 export default defineComponent({
   name: 'MonthlyChart',
-  extends: Bar,
+  extends: Doughnut,
   props:{
-    brands:{
+    fuelType:{
       type: Array,
       default: null
     },
@@ -19,13 +19,12 @@ export default defineComponent({
     }
   },
   mounted () {
-    // Overwriting base render method with actual data.
     this.renderChart({
-      labels: this.brands,
+      labels: this.fuelType,
       datasets: [
         {
-          label: 'Number of cars from each brand',
-          backgroundColor: '#f87979',
+          label: 'Fuel Type',
+        backgroundColor: ['rgb(255, 99, 132)', 'rgb(255, 159, 64)', 'rgb(153, 102, 255)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)'],
           data: this.quantity
         }
       ]
