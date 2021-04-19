@@ -18,18 +18,18 @@ async function fetchData() {
   
   
   const routes = [
-    {path: '/BAI_komis_samochodowy/AllVehicles', component: AllVehicles,  props: {
+    {path: '/AllVehicles', component: AllVehicles,  props: {
       cars: cars,
     }},
-    {path: '/BAI_komis_samochodowy/AllVehicles/:markName', name: 'vehicle-mark', props: true, component: OneMark},
-    {path: '/BAI_komis_samochodowy/ChartsAndDiagrams', component: ChartsAndDiagrams,props: {
+    {path: '/AllVehicles/:markName', name: 'vehicle-mark', props: true, component: OneMark},
+    {path: '/ChartsAndDiagrams', component: ChartsAndDiagrams,props: {
       cars: cars,
     }},
-    {path: '/BAI_komis_samochodowy/SearchVehicles', component: SearchVehicles, props: {
+    {path: '/SearchVehicles', component: SearchVehicles, props: {
       cars: cars,
     }},
-    {path: '/BAI_komis_samochodowy/Contact', component: Contact},
-    {path: '/BAI_komis_samochodowy/', component: Home}
+    {path: '/Contact', component: Contact},
+    {path: '/', component: Home}
   ];
 
   const router = createRouter({
