@@ -17,16 +17,16 @@ import 'popper.js/dist/popper.min.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
 async function fetchData() {
-  // let response = await fetch('https://my.api.mockaroo.com/cars/123?key=e9aed950&fbclid=IwAR2trX5Bxz7hcFwBSGtIXlXRsibznOZhlqPG5onX4ccNeOWlbcZ-EpDj_x0')
-  let response = await fetch('https://raw.githubusercontent.com/c-bool/BAI_komis_samochodowy/main/dane.json')
+  let response = await fetch('https://my.api.mockaroo.com/cars/123?key=e9aed950&fbclid=IwAR2trX5Bxz7hcFwBSGtIXlXRsibznOZhlqPG5onX4ccNeOWlbcZ-EpDj_x0')
+  // let response = await fetch('https://raw.githubusercontent.com/c-bool/BAI_komis_samochodowy/main/dane.json')
   const cars = await response.json()
   console.log(cars)
-  //let responseSecond = await fetch('https://my.api.mockaroo.com/amount.json?key=e9aed950')
-  let responseSecond = await fetch('https://raw.githubusercontent.com/c-bool/BAI_komis_samochodowy/main/amountYear.json') 
+  let responseSecond = await fetch('https://my.api.mockaroo.com/amount.json?key=e9aed950')
+  // let responseSecond = await fetch('https://raw.githubusercontent.com/c-bool/BAI_komis_samochodowy/main/amountYear.json') 
   const amountYear = await responseSecond.json()
 
-  //let responeThird = await fetch('https://my.api.mockaroo.com/city.json?key=e9aed950') 
-  let responeThird = await fetch('https://raw.githubusercontent.com/c-bool/BAI_komis_samochodowy/new_app_devel/city.json')  
+  let responeThird = await fetch('https://my.api.mockaroo.com/city.json?key=e9aed950') 
+  // let responeThird = await fetch('https://raw.githubusercontent.com/c-bool/BAI_komis_samochodowy/new_app_devel/city.json')  
   const cityStreet = await responeThird.json()
   //console.log(amountYear)
  
