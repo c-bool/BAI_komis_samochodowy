@@ -18,7 +18,7 @@
   margin-left: 25%;
 }
 
-h1#title[data-v-61dd7a3d] {
+h1#title{
     margin-top: -85px;
     padding: 95px;
 }
