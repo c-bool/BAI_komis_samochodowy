@@ -4,9 +4,8 @@
     <h1 id="title"></h1>
     
   </div>
- 
+    <p id="desc">Place, where you can buy your dream car</p>
   </div>
-   <p id="desc">Place, where you can buy your dream car</p>
 </template>
 
 <style scoped>

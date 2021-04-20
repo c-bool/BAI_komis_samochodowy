@@ -22,7 +22,7 @@ async function fetchData() {
   const cars = await response.json()
   console.log(cars)
   //let responseSecond = await fetch('https://my.api.mockaroo.com/amount.json?key=e9aed950')
-  let responseSecond = await fetch('https://raw.githubusercontent.com/c-bool/BAI_komis_samochodowy/main/amountYear.json') // 
+  let responseSecond = await fetch('https://raw.githubusercontent.com/c-bool/BAI_komis_samochodowy/main/amountYear.json') 
   const amountYear = await responseSecond.json()
 
   //let responeThird = await fetch('https://my.api.mockaroo.com/city.json?key=e9aed950') 

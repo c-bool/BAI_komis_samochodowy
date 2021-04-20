@@ -1,6 +1,6 @@
 <template>
   <div>
-    <LineChart :labels="years" :data="amount" />
+    <LineChart :labels="amount" :data="years" />
   </div>
 </template>
 <script>
