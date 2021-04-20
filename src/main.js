@@ -41,13 +41,13 @@ async function fetchData() {
     {path: '/BAI_komis_samochodowy/SearchVehicles', component: SearchVehicles, props: {
       cars: cars,
     }},
-    {path: '/BAI_komis_samochodowy/Contact', component: Contact},
+    {path: '/BAI_komis_samochodowy/Contact', component: Contact, props: {
+      cityStreet: cityStreet,
+    }},
     {path: '/BAI_komis_samochodowy/About', component: About, props: {
       amountYear: amountYear,
     }},
-    {path: '/BAI_komis_samochodowy/', component: Home, props: {
-      cityStreet: cityStreet,
-    }}
+    {path: '/BAI_komis_samochodowy/', component: Home }
   ];
 
   const router = createRouter({

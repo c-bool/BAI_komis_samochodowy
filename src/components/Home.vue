@@ -1,20 +1,5 @@
 <template>
 <div class="page">
-<div>
-    <h1>Global office locations</h1>
-    <table class="table">
-      <thead>
-        <tr>
-          <td><b>City | Street</b></td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="item in cityStreet" :key="item.id">
-          <td>{{ item.city }} | {{ item.street }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
     <div class="card-group">
   <div class="card">
     <img class="card-img-top" src="../assets/cars.jpg" alt="Card image cap">
@@ -76,16 +61,7 @@ Whatever your driving personality is, or the type of car design you're after, ou
 
 </div>
 </template>
-<script>
-export default {
-  props: {
-    cityStreet: {
-      type: undefined,
-      required: true,
-    },
-  },
-};
-</script>
+
 <style scoped>
 .col-sm {
     flex: 1 0 0%;
